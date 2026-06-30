@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Noor Eldeen — Flutter Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #0a0a0a;
-      --bg2:       #111111;
-      --bg3:       #1a1a1a;
-      --accent:    #B59410;
-      --accent2:   #B59410;
-      --lavender:  #B59410;
-      --white:     #F8FAFC;
-      --slate:     #94A3B8;
-      --border:    rgba(0, 230, 118, 0.25);
-      --card:      rgba(20, 20, 20, 0.9);
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --bg: #0a0a0a;
+      --bg2: #111111;
+      --bg3: #1a1a1a;
+      --accent: #B59410;
+      --accent2: #B59410;
+      --lavender: #B59410;
+      --white: #F8FAFC;
+      --slate: #94A3B8;
+      --border: rgba(0, 230, 118, 0.25);
+      --card: rgba(20, 20, 20, 0.9);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -34,14 +45,25 @@
     }
 
     /* ── SCROLLBAR ── */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 3px;
+    }
 
     /* ── HEADER ── */
     header {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
       padding: 1rem 2rem;
       display: flex;
@@ -62,9 +84,15 @@
       letter-spacing: -0.02em;
     }
 
-    .logo span { color: var(--accent); }
+    .logo span {
+      color: var(--accent);
+    }
 
-    nav { display: flex; gap: 0.25rem; align-items: center; }
+    nav {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+    }
 
     nav a {
       color: var(--slate);
@@ -76,8 +104,14 @@
       transition: color 0.2s, background 0.2s;
     }
 
-    nav a:hover { color: var(--white); background: rgba(0,230,118,0.1); }
-    nav a.active { color: var(--lavender); }
+    nav a:hover {
+      color: var(--white);
+      background: rgba(0, 230, 118, 0.1);
+    }
+
+    nav a.active {
+      color: var(--lavender);
+    }
 
     .nav-cta {
       background: var(--accent) !important;
@@ -86,10 +120,26 @@
       padding: 0.4rem 1rem !important;
     }
 
-    .nav-cta:hover { background: var(--accent2) !important; }
+    .nav-cta:hover {
+      background: var(--accent2) !important;
+    }
 
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--slate); border-radius: 2px; transition: all 0.3s; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--slate);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
 
     /* ── HERO ── */
     .hero {
@@ -108,7 +158,7 @@
       right: -10%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(0,230,118,0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(0, 230, 118, 0.15) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -119,7 +169,7 @@
       left: -10%;
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(0,230,118,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(0, 230, 118, 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -137,7 +187,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(0,230,118,0.1);
+      background: rgba(0, 230, 118, 0.1);
       border: 1px solid var(--border);
       color: var(--lavender);
       font-size: 0.8rem;
@@ -159,8 +209,15 @@
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.4;
+      }
     }
 
     .hero-name {
@@ -172,7 +229,9 @@
       margin-bottom: 0.5rem;
     }
 
-    .hero-name span { color: var(--accent); }
+    .hero-name span {
+      color: var(--accent);
+    }
 
     .hero-role {
       font-family: 'Space Grotesk', sans-serif;
@@ -183,9 +242,30 @@
       height: 2rem;
     }
 
-    .typed-text { color: var(--lavender); font-weight: 500; }
-    .cursor { display: inline-block; width: 2px; background: var(--accent); animation: blink 1s infinite; margin-left: 2px; }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .typed-text {
+      color: var(--lavender);
+      font-weight: 500;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      background: var(--accent);
+      animation: blink 1s infinite;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0
+      }
+    }
 
     .hero-desc {
       color: var(--slate);
@@ -195,7 +275,12 @@
       margin-bottom: 2rem;
     }
 
-    .hero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .hero-btns {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
 
     .btn {
       display: inline-flex;
@@ -216,7 +301,11 @@
       color: var(--white);
     }
 
-    .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,230,118,0.35); }
+    .btn-primary:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 230, 118, 0.35);
+    }
 
     .btn-outline {
       background: transparent;
@@ -224,9 +313,15 @@
       border: 1px solid var(--border);
     }
 
-    .btn-outline:hover { background: rgba(0,230,118,0.08); transform: translateY(-2px); }
+    .btn-outline:hover {
+      background: rgba(0, 230, 118, 0.08);
+      transform: translateY(-2px);
+    }
 
-    .socials { display: flex; gap: 1rem; }
+    .socials {
+      display: flex;
+      gap: 1rem;
+    }
 
     .social-link {
       width: 40px;
@@ -243,7 +338,12 @@
       transition: all 0.2s;
     }
 
-    .social-link:hover { background: var(--accent); color: var(--white); border-color: var(--accent); transform: translateY(-3px); }
+    .social-link:hover {
+      background: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
 
     .hero-visual {
       display: flex;
@@ -273,7 +373,7 @@
       position: absolute;
       inset: -20px;
       border-radius: 40px;
-      background: radial-gradient(circle, rgba(0,230,118,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(0, 230, 118, 0.12) 0%, transparent 70%);
       z-index: -1;
     }
 
@@ -308,7 +408,9 @@
       font-size: 0.85rem;
     }
 
-    .hero-photo-placeholder span { font-size: 3rem; }
+    .hero-photo-placeholder span {
+      font-size: 3rem;
+    }
 
     .photo-badge {
       position: absolute;
@@ -323,7 +425,7 @@
       z-index: 2;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      box-shadow: 0 4px 20px rgba(0,230,118,0.4);
+      box-shadow: 0 4px 20px rgba(0, 230, 118, 0.4);
     }
 
     .hero-card {
@@ -338,8 +440,15 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
     }
 
     .code-block {
@@ -348,11 +457,25 @@
       line-height: 1.8;
     }
 
-    .code-keyword { color: #69f0ae; }
-    .code-class { color: #67E8F9; }
-    .code-string { color: #86EFAC; }
-    .code-comment { color: #475569; }
-    .code-widget { color: #FCA5A5; }
+    .code-keyword {
+      color: #69f0ae;
+    }
+
+    .code-class {
+      color: #67E8F9;
+    }
+
+    .code-string {
+      color: #86EFAC;
+    }
+
+    .code-comment {
+      color: #475569;
+    }
+
+    .code-widget {
+      color: #FCA5A5;
+    }
 
     .hero-stats {
       display: grid;
@@ -362,7 +485,7 @@
     }
 
     .stat-box {
-      background: rgba(0,230,118,0.06);
+      background: rgba(0, 230, 118, 0.06);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 0.75rem;
@@ -376,12 +499,21 @@
       color: var(--lavender);
     }
 
-    .stat-label { font-size: 0.65rem; color: var(--slate); margin-top: 2px; }
+    .stat-label {
+      font-size: 0.65rem;
+      color: var(--slate);
+      margin-top: 2px;
+    }
 
     /* ── SECTION ── */
-    section { padding: 5rem 2rem; }
+    section {
+      padding: 5rem 2rem;
+    }
 
-    .container { max-width: 1100px; margin: 0 auto; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
     .section-label {
       font-size: 0.75rem;
@@ -400,7 +532,9 @@
       margin-bottom: 1rem;
     }
 
-    .section-title span { color: var(--accent); }
+    .section-title span {
+      color: var(--accent);
+    }
 
     .section-desc {
       color: var(--slate);
@@ -418,7 +552,9 @@
     }
 
     /* ── ABOUT ── */
-    #about { background: var(--bg2); }
+    #about {
+      background: var(--bg2);
+    }
 
     .about-grid {
       display: grid;
@@ -434,9 +570,18 @@
       font-size: 0.975rem;
     }
 
-    .about-text p strong { color: var(--lavender); font-weight: 500; }
+    .about-text p strong {
+      color: var(--lavender);
+      font-weight: 500;
+    }
 
-    .info-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; }
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
 
     .info-item {
       display: flex;
@@ -445,10 +590,22 @@
       font-size: 0.9rem;
     }
 
-    .info-label { color: var(--slate); min-width: 100px; font-size: 0.8rem; }
-    .info-value { color: var(--white); font-weight: 500; }
+    .info-label {
+      color: var(--slate);
+      min-width: 100px;
+      font-size: 0.8rem;
+    }
 
-    .about-highlights { display: flex; flex-direction: column; gap: 1rem; }
+    .info-value {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
     .highlight-card {
       background: var(--card);
@@ -461,26 +618,50 @@
       transition: border-color 0.2s, transform 0.2s;
     }
 
-    .highlight-card:hover { border-color: var(--accent); transform: translateX(4px); }
+    .highlight-card:hover {
+      border-color: var(--accent);
+      transform: translateX(4px);
+    }
 
     .h-icon {
       font-size: 1.5rem;
       flex-shrink: 0;
       width: 2.5rem;
       height: 2.5rem;
-      background: rgba(0,230,118,0.1);
+      background: rgba(0, 230, 118, 0.1);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .h-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.2rem; }
-    .h-desc { font-size: 0.82rem; color: var(--slate); }
+    .h-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .h-desc {
+      font-size: 0.82rem;
+      color: var(--slate);
+    }
 
     /* ── EDUCATION & EXPERIENCE ── */
-    .timeline { position: relative; padding-left: 2rem; }
-    .timeline::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 0; width: 2px; background: var(--border); }
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
 
     .timeline-item {
       position: relative;
@@ -496,7 +677,7 @@
       height: 10px;
       border-radius: 50%;
       background: var(--accent);
-      box-shadow: 0 0 0 3px rgba(0,230,118,0.15);
+      box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.15);
     }
 
     .timeline-period {
@@ -515,11 +696,26 @@
       margin-bottom: 0.2rem;
     }
 
-    .timeline-subtitle { color: var(--lavender); font-size: 0.85rem; font-weight: 500; margin-bottom: 0.6rem; }
+    .timeline-subtitle {
+      color: var(--lavender);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
 
-    .timeline-desc { color: var(--slate); font-size: 0.875rem; line-height: 1.7; }
+    .timeline-desc {
+      color: var(--slate);
+      font-size: 0.875rem;
+      line-height: 1.7;
+    }
 
-    .timeline-bullets { list-style: none; margin-top: 0.6rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .timeline-bullets {
+      list-style: none;
+      margin-top: 0.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
 
     .timeline-bullets li {
       color: var(--slate);
@@ -528,12 +724,25 @@
       position: relative;
     }
 
-    .timeline-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 3px; }
+    .timeline-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.7rem;
+      top: 3px;
+    }
 
     /* ── SKILLS ── */
-    #skills { background: var(--bg2); }
+    #skills {
+      background: var(--bg2);
+    }
 
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
 
     .skill-category {
       background: var(--card);
@@ -543,7 +752,9 @@
       transition: border-color 0.2s;
     }
 
-    .skill-category:hover { border-color: rgba(0,230,118,0.4); }
+    .skill-category:hover {
+      border-color: rgba(0, 230, 118, 0.4);
+    }
 
     .skill-cat-title {
       font-family: 'Space Grotesk', sans-serif;
@@ -566,11 +777,15 @@
       border-radius: 1px;
     }
 
-    .pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
     .pill {
-      background: rgba(124,58,237,0.12);
-      border: 1px solid rgba(0,230,118,0.25);
+      background: rgba(124, 58, 237, 0.12);
+      border: 1px solid rgba(0, 230, 118, 0.25);
       color: var(--lavender);
       font-size: 0.78rem;
       font-weight: 500;
@@ -579,10 +794,18 @@
       transition: all 0.2s;
     }
 
-    .pill:hover { background: var(--accent); color: var(--white); border-color: var(--accent); }
+    .pill:hover {
+      background: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+    }
 
     /* ── PROJECTS ── */
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
 
     .project-card {
       background: var(--card);
@@ -600,15 +823,24 @@
     .project-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 3px;
       background: linear-gradient(90deg, var(--accent), var(--lavender));
       opacity: 0;
       transition: opacity 0.25s;
     }
 
-    .project-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
-    .project-card:hover::before { opacity: 1; }
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
 
     .project-badge {
       display: inline-flex;
@@ -617,7 +849,7 @@
       font-size: 0.7rem;
       font-weight: 600;
       color: var(--accent);
-      background: rgba(0,230,118,0.08);
+      background: rgba(0, 230, 118, 0.08);
       border: 1px solid var(--border);
       padding: 0.2rem 0.6rem;
       border-radius: 100px;
@@ -632,9 +864,18 @@
       font-weight: 700;
     }
 
-    .project-desc { color: var(--slate); font-size: 0.875rem; line-height: 1.7; flex: 1; }
+    .project-desc {
+      color: var(--slate);
+      font-size: 0.875rem;
+      line-height: 1.7;
+      flex: 1;
+    }
 
-    .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
 
     .project-tag {
       font-size: 0.72rem;
@@ -645,7 +886,11 @@
       font-weight: 500;
     }
 
-    .project-links { display: flex; gap: 0.75rem; margin-top: auto; }
+    .project-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
 
     .project-link {
       font-size: 0.82rem;
@@ -658,15 +903,32 @@
       transition: color 0.2s;
     }
 
-    .project-link:hover { color: var(--accent); }
-    .project-link svg { width: 14px; height: 14px; }
+    .project-link:hover {
+      color: var(--accent);
+    }
+
+    .project-link svg {
+      width: 14px;
+      height: 14px;
+    }
 
     /* ── CONTACT ── */
-    #contact { background: var(--bg2); }
+    #contact {
+      background: var(--bg2);
+    }
 
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
 
-    .contact-info { display: flex; flex-direction: column; gap: 1.25rem; }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
 
     .contact-item {
       display: flex;
@@ -681,7 +943,7 @@
     .contact-icon {
       width: 2.5rem;
       height: 2.5rem;
-      background: rgba(0,230,118,0.1);
+      background: rgba(0, 230, 118, 0.1);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -690,7 +952,11 @@
       flex-shrink: 0;
     }
 
-    .contact-detail-label { font-size: 0.72rem; color: var(--slate); letter-spacing: 0.04em; }
+    .contact-detail-label {
+      font-size: 0.72rem;
+      color: var(--slate);
+      letter-spacing: 0.04em;
+    }
 
     .contact-detail-value {
       font-size: 0.9rem;
@@ -699,15 +965,33 @@
       text-decoration: none;
     }
 
-    .contact-detail-value:hover { color: var(--lavender); }
+    .contact-detail-value:hover {
+      color: var(--lavender);
+    }
 
-    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
 
-    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
 
-    .form-label { font-size: 0.78rem; font-weight: 500; color: var(--slate); }
+    .form-label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--slate);
+    }
 
     .form-input {
       background: var(--bg3);
@@ -722,10 +1006,18 @@
       width: 100%;
     }
 
-    .form-input:focus { border-color: var(--accent); }
-    .form-input::placeholder { color: var(--slate); }
+    .form-input:focus {
+      border-color: var(--accent);
+    }
 
-    textarea.form-input { resize: vertical; min-height: 130px; }
+    .form-input::placeholder {
+      color: var(--slate);
+    }
+
+    textarea.form-input {
+      resize: vertical;
+      min-height: 130px;
+    }
 
     .form-submit {
       background: var(--accent);
@@ -744,7 +1036,11 @@
       width: fit-content;
     }
 
-    .form-submit:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,230,118,0.35); }
+    .form-submit:hover {
+      background: var(--accent2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 230, 118, 0.35);
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -757,10 +1053,26 @@
       gap: 1rem;
     }
 
-    .footer-copy { font-size: 0.82rem; color: var(--slate); }
-    .footer-links { display: flex; gap: 1rem; }
-    .footer-link { color: var(--slate); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
-    .footer-link:hover { color: var(--lavender); }
+    .footer-copy {
+      font-size: 0.82rem;
+      color: var(--slate);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-link {
+      color: var(--slate);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+
+    .footer-link:hover {
+      color: var(--lavender);
+    }
 
     /* ── BACK TO TOP ── */
     #btt {
@@ -783,543 +1095,680 @@
       z-index: 999;
     }
 
-    #btt.visible { opacity: 1; transform: translateY(0); }
-    #btt:hover { background: var(--accent2); transform: translateY(-3px) !important; }
+    #btt.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #btt:hover {
+      background: var(--accent2);
+      transform: translateY(-3px) !important;
+    }
 
     /* ── FADE-IN ANIMATION ── */
-    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      header { padding: 1rem; }
-      nav { display: none; }
-      nav.open { display: flex; flex-direction: column; position: fixed; inset: 0; background: var(--bg); z-index: 999; justify-content: center; align-items: center; gap: 1rem; }
-      nav.open a { font-size: 1.25rem; }
-      .hamburger { display: flex; z-index: 1000; position: relative; }
+      header {
+        padding: 1rem;
+      }
 
-      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
-      .hero-btns { justify-content: center; }
-      .socials { justify-content: center; }
-      .hero-visual { display: none; }
-      .hero-photo-wrap { width: 260px; height: 310px; }
+      nav {
+        display: none;
+      }
 
-      .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      section { padding: 3.5rem 1.25rem; }
+      nav.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 0;
+        background: var(--bg);
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      nav.open a {
+        font-size: 1.25rem;
+      }
+
+      .hamburger {
+        display: flex;
+        z-index: 1000;
+        position: relative;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+      }
+
+      .hero-btns {
+        justify-content: center;
+      }
+
+      .socials {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .hero-photo-wrap {
+        width: 260px;
+        height: 310px;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 3.5rem 1.25rem;
+      }
     }
   </style>
 </head>
+<!-- <script>
+function sendContactMessage() {
+const n = document.getElementById('contact-name').value;
+const e = document.getElementById('contact-email').value;
+const s = document.getElementById('contact-subject').value;
+const m = document.getElementById('contact-message').value;
+
+if (!n || !e || !m) {
+alert('Please fill in your name, email, and message.');
+return;
+}
+
+const subject = encodeURIComponent(s || 'Portfolio Contact');
+const body = encodeURIComponent(`From: ${n} (${e})\n\n${m}`);
+window.location.href = `mailto:noor.elden.wael1@gmail.com?subject=${subject}&body=${body}`;
+}
+</script> -->
+
 <body>
 
-<!-- HEADER -->
-<header>
-  <a href="#home" class="logo">Noor Elden Wael<span></span></a>
-  <nav id="nav">
-    <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact" class="nav-cta">Contact</a>
-  </nav>
-  <div class="hamburger" id="ham" onclick="toggleNav()">
-    <span></span><span></span><span></span>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header>
+    <a href="#home" class="logo">Noor Elden Wael<span></span></a>
+    <nav id="nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+    <div class="hamburger" id="ham" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-inner">
-    <div class="hero-content fade-in">
-      <div class="hero-tag">Available for opportunities</div>
-      <h1 class="hero-name">Noor<br><span>Eldeen Wael</span></h1>
-      <div class="hero-role">
-        <span class="typed-text" id="typed"></span><span class="cursor"></span>
-      </div>
-      <p class="hero-desc">
-        Cross-platform mobile developer specializing in Flutter. I build scalable, production-ready apps with Clean Architecture, BLoC/Cubit, and RESTful API integration — and I care deeply about performance, UX, and clean code.
-      </p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn btn-primary">View My Work ↓</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
-      </div>
-      <div class="socials">
-        <a href="https://github.com/NoorEldenWael" class="social-link" title="GitHub" target="_blank">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/noor-wael-4ba750292/" class="social-link" title="LinkedIn" target="_blank">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.43l.02 6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.23 0z"/></svg>
-        </a>
-        <a href="https://www.facebook.com/nour.waelsabry" class="social-link" title="Facebook" target="_blank">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="hero-visual fade-in">
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-inner">
-          <!-- Replace the src below with your actual photo path, e.g. src="img/hero/erase image icpc.jpeg" -->
-          <img src="img/hero/hero.jpg" alt="Noor Eldeen"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="hero-photo-placeholder" style="display:none;">
-            <span>🧑‍💻</span>
-            <p>Add your photo to<br><code>img/hero/</code></p>
-          </div>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-content fade-in">
+        <div class="hero-tag">Available for opportunities</div>
+        <h1 class="hero-name">Noor<br><span>Eldeen Wael</span></h1>
+        <div class="hero-role">
+          <span class="typed-text" id="typed"></span><span class="cursor"></span>
         </div>
-        <div class="photo-badge">Flutter Dev</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">Who I Am</div>
-      <h2 class="section-title">About <span>Me</span></h2>
-      <div class="divider"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-text fade-in">
-        <p>I'm a <strong>Flutter developer</strong> and fresh graduate from Menoufia University, passionate about building cross-platform mobile applications that are fast, elegant, and maintainable.</p>
-        <p>I enjoy working with <strong>Clean Architecture and BLoC/Cubit</strong>, integrating REST APIs with Dio, and solving complex state-management challenges. I've shipped apps as part of collaborative teams and solo, covering everything from real-time chat to geolocation-based discovery.</p>
-        <p>I'm actively looking for a role where I can grow, ship meaningful products, and keep learning.</p>
-        <ul class="info-list" style="margin-top:1.75rem">
-          <li class="info-item"><span class="info-label">Location</span><span class="info-value">Cairo, Egypt</span></li>
-          <li class="info-item"><span class="info-label">Email</span><span class="info-value">noor.elden.wael1@gmail.com</span></li>
-          <li class="info-item"><span class="info-label">Phone</span><span class="info-value">+20 115 658 5119</span></li>
-          <li class="info-item"><span class="info-label">Degree</span><span class="info-value">B.Sc. Computer & Information Systems, 2026</span></li>
-          <li class="info-item"><span class="info-label">Languages</span><span class="info-value">Arabic (native) · English (professional)</span></li>
-          <li class="info-item"><span class="info-label">Military</span><span class="info-value">Exempted</span></li>
-        </ul>
-        <div style="margin-top:1.75rem">
-          <a href="https://drive.google.com/file/d/1n1O_IP0nxjrg_nMjJzfuDCb4Q7YmbnKp/view?usp=drivesdk" class="btn btn-outline" download>↓ Download CV</a>
+        <p class="hero-desc">
+          Cross-platform mobile developer specializing in Flutter. I build scalable, production-ready apps with Clean
+          Architecture, BLoC/Cubit, and RESTful API integration — and I care deeply about performance, UX, and clean
+          code.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View My Work ↓</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
         </div>
-      </div>
-      <div class="about-highlights fade-in">
-        <div class="highlight-card">
-          <div class="h-icon">📱</div>
-          <div>
-            <div class="h-title">Mobile-First Mindset</div>
-            <div class="h-desc">Cross-platform Flutter apps for Android & iOS, optimized for performance across screen sizes using Device Preview.</div>
-          </div>
-        </div>
-        <div class="highlight-card">
-          <div class="h-icon">🏗️</div>
-          <div>
-            <div class="h-title">Architecture & Patterns</div>
-            <div class="h-desc">Clean Architecture, feature-based project structure, BLoC/Cubit, MVVM, dependency injection with Injectable & GetIt.</div>
-          </div>
-        </div>
-        <div class="highlight-card">
-          <div class="h-icon">🔗</div>
-          <div>
-            <div class="h-title">API & Backend Integration</div>
-            <div class="h-desc">Dio, Retrofit, interceptors for token refresh and secure logout, Supabase, Hive offline-first patterns.</div>
-          </div>
-        </div>
-        <div class="highlight-card">
-          <div class="h-icon">🤝</div>
-          <div>
-            <div class="h-title">Team Contributor</div>
-            <div class="h-desc">Collaborated in teams of 6–7 on graduation and capstone projects, with Git/GitHub workflows and code reviews.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE & EDUCATION -->
-<section id="experience" style="background: var(--bg);">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">Background</div>
-      <h2 class="section-title">Experience &amp; <span>Education</span></h2>
-      <div class="divider"></div>
-    </div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem;" class="exp-grid fade-in">
-      <div>
-        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1rem; color:var(--lavender); margin-bottom:1.5rem; font-weight:600;">💼 Experience</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-period">Jun 2025 – Oct 2025</div>
-            <div class="timeline-title">Cross-Platform Mobile App Developer Intern</div>
-            <div class="timeline-subtitle">Digital Egypt Pioneers Initiative (DEPI) · Cairo, Egypt</div>
-            <ul class="timeline-bullets">
-              <li>Intensive training in Dart fundamentals, advanced Flutter, Firebase basics, and Android/iOS deployment workflows.</li>
-              <li>Built and version-controlled multiple Flutter projects using Git, applying unit testing and functional documentation.</li>
-              <li>Collaborated with a team of 6 to deliver a capstone Flutter app (Electricity Consumption Management).</li>
-              <li>Developed foundational UX/UI design skills applied across all program projects.</li>
-            </ul>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-period">Volunteering</div>
-            <div class="timeline-title">Head of Public Relations</div>
-            <div class="timeline-subtitle">PI & AI Community</div>
-            <ul class="timeline-bullets">
-              <li>Led the PR team for a university tech community focused on AI and programming.</li>
-            </ul>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-period">Volunteering</div>
-            <div class="timeline-title">Developing Team Member</div>
-            <div class="timeline-subtitle">Compiler Community</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3 style="font-family:'Space Grotesk',sans-serif; font-size:1rem; color:var(--lavender); margin-bottom:1.5rem; font-weight:600;">🎓 Education</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-period">2022 – 2026</div>
-            <div class="timeline-title">Bachelor of Computer and Information Systems</div>
-            <div class="timeline-subtitle">Menoufia University · Egypt</div>
-            <p class="timeline-desc">Coursework spanning data structures, OOP, algorithms, databases, and software engineering principles.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">What I Work With</div>
-      <h2 class="section-title">Technical <span>Skills</span></h2>
-      <div class="divider"></div>
-    </div>
-    <div class="skills-grid fade-in">
-      <div class="skill-category">
-        <div class="skill-cat-title">Mobile Development</div>
-        <div class="pills">
-          <span class="pill">Flutter</span>
-          <span class="pill">Dart</span>
-          <span class="pill">BLoC / Cubit</span>
-          <span class="pill">GetX</span>
-          <span class="pill">Clean Architecture</span>
-          <span class="pill">MVVM</span>
-          <span class="pill">Feature-Based Structure</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-cat-title">Networking & APIs</div>
-        <div class="pills">
-          <span class="pill">Dio</span>
-          <span class="pill">Retrofit</span>
-          <span class="pill">RESTful APIs</span>
-          <span class="pill">Postman</span>
-          <span class="pill">Interceptors</span>
-          <span class="pill">Token Refresh</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-cat-title">Storage & Backend</div>
-        <div class="pills">
-          <span class="pill">Hive</span>
-          <span class="pill">Supabase</span>
-          <span class="pill">Firebase (basics)</span>
-          <span class="pill">Flutter Secure Storage</span>
-          <span class="pill">SQL</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-cat-title">DI & Architecture Tools</div>
-        <div class="pills">
-          <span class="pill">Injectable</span>
-          <span class="pill">GetIt</span>
-          <span class="pill">GetStorage</span>
-          <span class="pill">Dependency Injection</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-cat-title">Device & Platform</div>
-        <div class="pills">
-          <span class="pill">Geolocator</span>
-          <span class="pill">Geocoding</span>
-          <span class="pill">Google ML Kit (OCR)</span>
-          <span class="pill">Speech-to-Text</span>
-          <span class="pill">fl_chart</span>
-          <span class="pill">Device Preview</span>
-          <span class="pill">Localization (i18n)</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-cat-title">Programming Languages</div>
-        <div class="pills">
-          <span class="pill">Dart</span>
-          <span class="pill">Java</span>
-          <span class="pill">JavaScript</span>
-          <span class="pill">C++</span>
-          <span class="pill">C</span>
-          <span class="pill">HTML & CSS</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-cat-title">Dev Tools & Practices</div>
-        <div class="pills">
-          <span class="pill">Git & GitHub</span>
-          <span class="pill">Unit Testing</span>
-          <span class="pill">OOP</span>
-          <span class="pill">Data Structures</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-cat-title">Soft Skills</div>
-        <div class="pills">
-          <span class="pill">Teamwork</span>
-          <span class="pill">Critical Thinking</span>
-          <span class="pill">Communication</span>
-          <span class="pill">Self-Motivated</span>
-          <span class="pill">Attention to Detail</span>
-          <span class="pill">Curiosity</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" style="background: var(--bg);">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">What I've Built</div>
-      <h2 class="section-title">Featured <span>Projects</span></h2>
-      <div class="divider"></div>
-    </div>
-    <div class="projects-grid fade-in">
-
-      <!-- SWAV -->
-      <div class="project-card">
-        <div class="project-badge">🎓 Graduation Project</div>
-        <div class="project-title">SWAV — Marketplace App</div>
-        <p class="project-desc">Full-featured marketplace supporting item listings, cart management, in-app chat, favorites, ratings, and a negotiation/swap request workflow. Features geolocation-based item discovery and a complete auth flow.</p>
-        <div class="project-tags">
-          <span class="project-tag">Flutter</span>
-          <span class="project-tag">BLoC</span>
-          <span class="project-tag">Dio</span>
-          <span class="project-tag">Geolocator</span>
-          <span class="project-tag">Feature-based</span>
-          <span class="project-tag">Team of 7</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/NoorEldenWael" class="project-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
+        <div class="socials">
+          <a href="https://github.com/NoorEldenWael" class="social-link" title="GitHub" target="_blank">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/noor-wael-4ba750292/" class="social-link" title="LinkedIn"
+            target="_blank">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.43l.02 6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.23 0z" />
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/nour.waelsabry" class="social-link" title="Facebook" target="_blank">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path
+                d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z" />
+            </svg>
           </a>
         </div>
       </div>
-
-      <!-- Online Exam App -->
-      <div class="project-card">
-        <div class="project-badge">👥 Team Project</div>
-        <div class="project-title">Online Exam App</div>
-        <p class="project-desc">Full-featured exam application enabling students to browse subjects, take timed exams, and review detailed result history. Polished UX with shimmer loading, OTP-based password reset, and cached images.</p>
-        <div class="project-tags">
-          <span class="project-tag">Clean Architecture</span>
-          <span class="project-tag">BLoC / Cubit</span>
-          <span class="project-tag">Dio & Retrofit</span>
-          <span class="project-tag">Hive</span>
-          <span class="project-tag">Injectable / GetIt</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/NoorEldenWael" class="project-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
+      <div class="hero-visual fade-in">
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-inner">
+            <!-- Replace the src below with your actual photo path, e.g. src="img/hero/erase image icpc.jpeg" -->
+            <img src="img/hero/hero.jpg" alt="Noor Eldeen"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="hero-photo-placeholder" style="display:none;">
+              <span>🧑‍💻</span>
+              <p>Add your photo to<br><code>img/hero/</code></p>
+            </div>
+          </div>
+          <div class="photo-badge">Flutter Dev</div>
         </div>
       </div>
-
-      <!-- Electricity App -->
-      <div class="project-card">
-        <div class="project-badge">⚡ DEPI Capstone · Team of 6</div>
-        <div class="project-title">Electricity Consumption Manager</div>
-        <p class="project-desc">Flutter app for tracking household electricity readings, calculating bills, and visualizing consumption trends with interactive charts. Includes full Arabic/English localization, dark/light theming, and in-app complaint module with OCR and voice input.</p>
-        <div class="project-tags">
-          <span class="project-tag">Supabase</span>
-          <span class="project-tag">Hive</span>
-          <span class="project-tag">GetX</span>
-          <span class="project-tag">fl_chart</span>
-          <span class="project-tag">ML Kit OCR</span>
-          <span class="project-tag">Speech-to-Text</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/NoorEldenWael" class="project-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
-        </div>
-      </div>
-
-      <!-- To-Do App -->
-      <div class="project-card">
-        <div class="project-badge">🧪 Personal Project</div>
-        <div class="project-title">To-Do App</div>
-        <p class="project-desc">Task management app built with Flutter and GetX, allowing users to add tasks, mark them complete, and manage personalized task lists with reactive state updates. A focused exercise in widget composition and state management fundamentals.</p>
-        <div class="project-tags">
-          <span class="project-tag">Flutter</span>
-          <span class="project-tag">GetX</span>
-          <span class="project-tag">Reactive State</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/NoorEldenWael" class="project-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label">Let's Talk</div>
-      <h2 class="section-title">Get In <span>Touch</span></h2>
-      <div class="divider"></div>
-      <p class="section-desc">Have a project in mind or want to discuss an opportunity? I'd love to hear from you.</p>
-    </div>
-    <div class="contact-grid fade-in">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon">📧</div>
-          <div>
-            <div class="contact-detail-label">EMAIL</div>
-            <a href="mailto:noor.elden.wael1@gmail.com" class="contact-detail-value">noor.elden.wael1@gmail.com</a>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <p>I'm a <strong>Flutter developer</strong> and fresh graduate from Menoufia University, passionate about
+            building cross-platform mobile applications that are fast, elegant, and maintainable.</p>
+          <p>I enjoy working with <strong>Clean Architecture and BLoC/Cubit</strong>, integrating REST APIs with Dio,
+            and solving complex state-management challenges. I've shipped apps as part of collaborative teams and solo,
+            covering everything from real-time chat to geolocation-based discovery.</p>
+          <p>I'm actively looking for a role where I can grow, ship meaningful products, and keep learning.</p>
+          <ul class="info-list" style="margin-top:1.75rem">
+            <li class="info-item"><span class="info-label">Location</span><span class="info-value">Cairo, Egypt</span>
+            </li>
+            <li class="info-item"><span class="info-label">Email</span><span
+                class="info-value">noor.elden.wael1@gmail.com</span></li>
+            <li class="info-item"><span class="info-label">Phone</span><span class="info-value">+20 115 658 5119</span>
+            </li>
+            <li class="info-item"><span class="info-label">Degree</span><span class="info-value">B.Sc. Computer &
+                Information Systems, 2026</span></li>
+            <li class="info-item"><span class="info-label">Languages</span><span class="info-value">Arabic (native) ·
+                English (professional)</span></li>
+            <li class="info-item"><span class="info-label">Military</span><span class="info-value">Exempted</span></li>
+          </ul>
+          <div style="margin-top:1.75rem">
+            <a href="https://drive.google.com/file/d/1n1O_IP0nxjrg_nMjJzfuDCb4Q7YmbnKp/view?usp=drivesdk"
+              class="btn btn-outline" download>↓ Download CV</a>
           </div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon">📱</div>
-          <div>
-            <div class="contact-detail-label">PHONE</div>
-            <a href="tel:+201156585119" class="contact-detail-value">+20 115 658 5119</a>
+        <div class="about-highlights fade-in">
+          <div class="highlight-card">
+            <div class="h-icon">📱</div>
+            <div>
+              <div class="h-title">Mobile-First Mindset</div>
+              <div class="h-desc">Cross-platform Flutter apps for Android & iOS, optimized for performance across screen
+                sizes using Device Preview.</div>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div>
-            <div class="contact-detail-label">LOCATION</div>
-            <span class="contact-detail-value">Cairo, Egypt</span>
+          <div class="highlight-card">
+            <div class="h-icon">🏗️</div>
+            <div>
+              <div class="h-title">Architecture & Patterns</div>
+              <div class="h-desc">Clean Architecture, feature-based project structure, BLoC/Cubit, MVVM, dependency
+                injection with Injectable & GetIt.</div>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">💼</div>
-          <div>
-            <div class="contact-detail-label">LINKEDIN</div>
-            <a href="https://www.linkedin.com/in/noor-wael-4ba750292/" target="_blank" class="contact-detail-value">linkedin.com/in/noor-wael-4ba750292</a>
+          <div class="highlight-card">
+            <div class="h-icon">🔗</div>
+            <div>
+              <div class="h-title">API & Backend Integration</div>
+              <div class="h-desc">Dio, Retrofit, interceptors for token refresh and secure logout, Supabase, Hive
+                offline-first patterns.</div>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">🐙</div>
-          <div>
-            <div class="contact-detail-label">GITHUB</div>
-            <a href="https://github.com/NoorEldenWael" target="_blank" class="contact-detail-value">github.com/NoorEldenWael</a>
+          <div class="highlight-card">
+            <div class="h-icon">🤝</div>
+            <div>
+              <div class="h-title">Team Contributor</div>
+              <div class="h-desc">Collaborated in teams of 6–7 on graduation and capstone projects, with Git/GitHub
+                workflows and code reviews.</div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Name</label>
-            <input type="text" class="form-input" placeholder="Your name" />
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & EDUCATION -->
+  <section id="experience" style="background: var(--bg);">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">Background</div>
+        <h2 class="section-title">Experience &amp; <span>Education</span></h2>
+        <div class="divider"></div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem;" class="exp-grid fade-in">
+        <div>
+          <h3
+            style="font-family:'Space Grotesk',sans-serif; font-size:1rem; color:var(--lavender); margin-bottom:1.5rem; font-weight:600;">
+            💼 Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-period">Jun 2025 – Oct 2025</div>
+              <div class="timeline-title">Cross-Platform Mobile App Developer Intern</div>
+              <div class="timeline-subtitle">Digital Egypt Pioneers Initiative (DEPI) · Cairo, Egypt</div>
+              <ul class="timeline-bullets">
+                <li>Intensive training in Dart fundamentals, advanced Flutter, Firebase basics, and Android/iOS
+                  deployment workflows.</li>
+                <li>Built and version-controlled multiple Flutter projects using Git, applying unit testing and
+                  functional documentation.</li>
+                <li>Collaborated with a team of 6 to deliver a capstone Flutter app (Electricity Consumption
+                  Management).</li>
+                <li>Developed foundational UX/UI design skills applied across all program projects.</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-period">Volunteering</div>
+              <div class="timeline-title">Head of Public Relations</div>
+              <div class="timeline-subtitle">PI & AI Community</div>
+              <ul class="timeline-bullets">
+                <li>Led the PR team for a university tech community focused on AI and programming.</li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-period">Volunteering</div>
+              <div class="timeline-title">Developing Team Member</div>
+              <div class="timeline-subtitle">Compiler Community</div>
+            </div>
           </div>
-          <div class="form-group">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-input" placeholder="your@email.com" />
+        </div>
+        <div>
+          <h3
+            style="font-family:'Space Grotesk',sans-serif; font-size:1rem; color:var(--lavender); margin-bottom:1.5rem; font-weight:600;">
+            🎓 Education</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-period">2022 – 2026</div>
+              <div class="timeline-title">Bachelor of Computer and Information Systems</div>
+              <div class="timeline-subtitle">Menoufia University · Egypt</div>
+              <p class="timeline-desc">Coursework spanning data structures, OOP, algorithms, databases, and software
+                engineering principles.</p>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">What I Work With</div>
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <div class="divider"></div>
+      </div>
+      <div class="skills-grid fade-in">
+        <div class="skill-category">
+          <div class="skill-cat-title">Mobile Development</div>
+          <div class="pills">
+            <span class="pill">Flutter</span>
+            <span class="pill">Dart</span>
+            <span class="pill">BLoC / Cubit</span>
+            <span class="pill">GetX</span>
+            <span class="pill">Clean Architecture</span>
+            <span class="pill">MVVM</span>
+            <span class="pill">Feature-Based Structure</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">Networking & APIs</div>
+          <div class="pills">
+            <span class="pill">Dio</span>
+            <span class="pill">Retrofit</span>
+            <span class="pill">RESTful APIs</span>
+            <span class="pill">Postman</span>
+            <span class="pill">Interceptors</span>
+            <span class="pill">Token Refresh</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">Storage & Backend</div>
+          <div class="pills">
+            <span class="pill">Hive</span>
+            <span class="pill">Supabase</span>
+            <span class="pill">Firebase (basics)</span>
+            <span class="pill">Flutter Secure Storage</span>
+            <span class="pill">SQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">DI & Architecture Tools</div>
+          <div class="pills">
+            <span class="pill">Injectable</span>
+            <span class="pill">GetIt</span>
+            <span class="pill">GetStorage</span>
+            <span class="pill">Dependency Injection</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">Device & Platform</div>
+          <div class="pills">
+            <span class="pill">Geolocator</span>
+            <span class="pill">Geocoding</span>
+            <span class="pill">Google ML Kit (OCR)</span>
+            <span class="pill">Speech-to-Text</span>
+            <span class="pill">fl_chart</span>
+            <span class="pill">Device Preview</span>
+            <span class="pill">Localization (i18n)</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">Programming Languages</div>
+          <div class="pills">
+            <span class="pill">Dart</span>
+            <span class="pill">Java</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">C++</span>
+            <span class="pill">C</span>
+            <span class="pill">HTML & CSS</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">Dev Tools & Practices</div>
+          <div class="pills">
+            <span class="pill">Git & GitHub</span>
+            <span class="pill">Unit Testing</span>
+            <span class="pill">OOP</span>
+            <span class="pill">Data Structures</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-title">Soft Skills</div>
+          <div class="pills">
+            <span class="pill">Teamwork</span>
+            <span class="pill">Critical Thinking</span>
+            <span class="pill">Communication</span>
+            <span class="pill">Self-Motivated</span>
+            <span class="pill">Attention to Detail</span>
+            <span class="pill">Curiosity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" style="background: var(--bg);">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">What I've Built</div>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="divider"></div>
+      </div>
+      <div class="projects-grid fade-in">
+
+        <!-- SWAV -->
+        <div class="project-card">
+          <div class="project-badge">🎓 Graduation Project</div>
+          <div class="project-title">SWAV — Marketplace App</div>
+          <p class="project-desc">Full-featured marketplace supporting item listings, cart management, in-app chat,
+            favorites, ratings, and a negotiation/swap request workflow. Features geolocation-based item discovery and a
+            complete auth flow.</p>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">BLoC</span>
+            <span class="project-tag">Dio</span>
+            <span class="project-tag">Geolocator</span>
+            <span class="project-tag">Feature-based</span>
+            <span class="project-tag">Team of 7</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/NoorEldenWael" class="project-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Online Exam App -->
+        <div class="project-card">
+          <div class="project-badge">👥 Team Project</div>
+          <div class="project-title">Online Exam App</div>
+          <p class="project-desc">Full-featured exam application enabling students to browse subjects, take timed exams,
+            and review detailed result history. Polished UX with shimmer loading, OTP-based password reset, and cached
+            images.</p>
+          <div class="project-tags">
+            <span class="project-tag">Clean Architecture</span>
+            <span class="project-tag">BLoC / Cubit</span>
+            <span class="project-tag">Dio & Retrofit</span>
+            <span class="project-tag">Hive</span>
+            <span class="project-tag">Injectable / GetIt</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/NoorEldenWael" class="project-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Electricity App -->
+        <div class="project-card">
+          <div class="project-badge">⚡ DEPI Capstone · Team of 6</div>
+          <div class="project-title">Electricity Consumption Manager</div>
+          <p class="project-desc">Flutter app for tracking household electricity readings, calculating bills, and
+            visualizing consumption trends with interactive charts. Includes full Arabic/English localization,
+            dark/light theming, and in-app complaint module with OCR and voice input.</p>
+          <div class="project-tags">
+            <span class="project-tag">Supabase</span>
+            <span class="project-tag">Hive</span>
+            <span class="project-tag">GetX</span>
+            <span class="project-tag">fl_chart</span>
+            <span class="project-tag">ML Kit OCR</span>
+            <span class="project-tag">Speech-to-Text</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/NoorEldenWael" class="project-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- To-Do App -->
+        <div class="project-card">
+          <div class="project-badge">🧪 Personal Project</div>
+          <div class="project-title">To-Do App</div>
+          <p class="project-desc">Task management app built with Flutter and GetX, allowing users to add tasks, mark
+            them complete, and manage personalized task lists with reactive state updates. A focused exercise in widget
+            composition and state management fundamentals.</p>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">GetX</span>
+            <span class="project-tag">Reactive State</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/NoorEldenWael" class="project-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4 11.5 11.5 0 0 1 3 .4c2.28-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-label">Let's Talk</div>
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="divider"></div>
+        <p class="section-desc">Have a project in mind or want to discuss an opportunity? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid fade-in">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-detail-label">EMAIL</div>
+              <a href="mailto:noor.elden.wael1@gmail.com" class="contact-detail-value">noor.elden.wael1@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <div class="contact-detail-label">PHONE</div>
+              <a href="tel:+201156585119" class="contact-detail-value">+20 115 658 5119</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-detail-label">LOCATION</div>
+              <span class="contact-detail-value">Cairo, Egypt</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div>
+              <div class="contact-detail-label">LINKEDIN</div>
+              <a href="https://www.linkedin.com/in/noor-wael-4ba750292/" target="_blank"
+                class="contact-detail-value">linkedin.com/in/noor-wael-4ba750292</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🐙</div>
+            <div>
+              <div class="contact-detail-label">GITHUB</div>
+              <a href="https://github.com/NoorEldenWael" target="_blank"
+                class="contact-detail-value">github.com/NoorEldenWael</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="form-group">
+          <label class="form-label">Name</label>
+          <input type="text" id="contact-name" class="form-input" placeholder="Your name" />
         </div>
         <div class="form-group">
-          <label class="form-label">Subject</label>
-          <input type="text" class="form-input" placeholder="What's this about?" />
+          <label class="form-label">Email</label>
+          <input type="email" id="contact-email" class="form-input" placeholder="your@email.com" />
         </div>
-        <div class="form-group">
-          <label class="form-label">Message</label>
-          <textarea class="form-input" placeholder="Tell me about your project or opportunity..."></textarea>
-        </div>
-        <button class="form-submit">Send Message →</button>
       </div>
+      <div class="form-group">
+        <label class="form-label">Subject</label>
+        <input type="text" id="contact-subject" class="form-input" placeholder="What's this about?" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea id="contact-message" class="form-input"
+          placeholder="Tell me about your project or opportunity..."></textarea>
+      </div>
+      <button type="button" class="form-submit" onclick="sendContactMessage()">Send Message →</button> -->
     </div>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-copy">© 2026 Noor Eldeen Wael. All rights reserved.</div>
-  <div class="footer-links">
-    <a href="https://github.com/NoorEldenWael" class="footer-link" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/noor-wael-4ba750292/" class="footer-link" target="_blank">LinkedIn</a>
-    <a href="https://www.facebook.com/nour.waelsabry" class="footer-link" target="_blank">Facebook</a>
-  </div>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-copy">© 2026 Noor Eldeen Wael. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="https://github.com/NoorEldenWael" class="footer-link" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/noor-wael-4ba750292/" class="footer-link" target="_blank">LinkedIn</a>
+      <a href="https://www.facebook.com/nour.waelsabry" class="footer-link" target="_blank">Facebook</a>
+    </div>
+  </footer>
 
-<!-- BACK TO TOP -->
-<a href="#home" id="btt" title="Back to top">↑</a>
+  <!-- BACK TO TOP -->
+  <a href="#home" id="btt" title="Back to top">↑</a>
 
-<script>
-  // Typing animation
-  const roles = ['Flutter Developer', 'Mobile App Builder','Clean Arch Enthusiast'];
-  let ri = 0, ci = 0, deleting = false;
-  const el = document.getElementById('typed');
+  <script>
+    // Typing animation
+    const roles = ['Flutter Developer', 'Mobile App Builder', 'Clean Arch Enthusiast'];
+    let ri = 0, ci = 0, deleting = false;
+    const el = document.getElementById('typed');
 
-  function type() {
-    const word = roles[ri];
-    if (!deleting) {
-      el.textContent = word.slice(0, ci + 1);
-      ci++;
-      if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
-    } else {
-      el.textContent = word.slice(0, ci - 1);
-      ci--;
-      if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+    function type() {
+      const word = roles[ri];
+      if (!deleting) {
+        el.textContent = word.slice(0, ci + 1);
+        ci++;
+        if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
+      } else {
+        el.textContent = word.slice(0, ci - 1);
+        ci--;
+        if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+      }
+      setTimeout(type, deleting ? 55 : 90);
     }
-    setTimeout(type, deleting ? 55 : 90);
-  }
-  type();
+    type();
 
-  // Nav scroll active + header shadow
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('nav a');
-  const btt = document.getElementById('btt');
+    // Nav scroll active + header shadow
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+    const btt = document.getElementById('btt');
 
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    btt.classList.toggle('visible', y > 400);
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      btt.classList.toggle('visible', y > 400);
 
-    let current = '';
-    sections.forEach(s => { if (y >= s.offsetTop - 120) current = s.id; });
-    navLinks.forEach(a => {
-      a.classList.remove('active');
-      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      let current = '';
+      sections.forEach(s => { if (y >= s.offsetTop - 120) current = s.id; });
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      });
     });
-  });
 
-  // Hamburger
-  const nav = document.getElementById('nav');
-  function toggleNav() { nav.classList.toggle('open'); }
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+    // Hamburger
+    const nav = document.getElementById('nav');
+    function toggleNav() { nav.classList.toggle('open'); }
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 
-  // Fade-in on scroll
-  const fades = document.querySelectorAll('.fade-in');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  fades.forEach(f => io.observe(f));
+    // Fade-in on scroll
+    const fades = document.querySelectorAll('.fade-in');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    fades.forEach(f => io.observe(f));
 
-  // Responsive exp grid
-  const expGrid = document.querySelector('.exp-grid');
-  function checkGrid() {
-    if (expGrid) expGrid.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr';
-  }
-  checkGrid();
-  window.addEventListener('resize', checkGrid);
-</script>
+    // Responsive exp grid
+    const expGrid = document.querySelector('.exp-grid');
+    function checkGrid() {
+      if (expGrid) expGrid.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr';
+    }
+    checkGrid();
+    window.addEventListener('resize', checkGrid);
+  </script>
 
 </body>
+
 </html>
